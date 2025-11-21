@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Query Statistics</h2>
+
+<p>Total Queries Checked: <strong>{{ total }}</strong></p>
+<p>Safe Queries: <strong>{{ safe }}</strong></p>
+<p>Unsafe Queries: <strong>{{ unsafe }}</strong></p>
+
+<a href="/admin" class="btn">Back</a>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Query Checker</h2>
+
+<form method="POST">
+    <textarea name="query" required>{{ query_text }}</textarea><br>
+    <button class="btn" type="submit">Check Query</button>
+    <a class="btn clear" href="/clear">Clear</a>
+</form>
+
+{% if result %}
+<p class="result">Result: <strong>{{ result }}</strong></p>
+{% endif %}
+
+<div class="button-group">
+    <a href="/stats" class="btn">Stats</a>
+    <a href="/logout" class="btn">Logout</a>
+</div>
+{% endblock %}

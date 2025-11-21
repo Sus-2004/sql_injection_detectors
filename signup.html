@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Create Account</h2>
+
+<form method="POST">
+    <input type="email" name="email" placeholder="Email" required><br>
+    <input type="password" name="password" placeholder="Password" required><br>
+    <button class="btn" type="submit">Signup</button>
+</form>
+
+{% if error %}
+<p class="error">{{ error }}</p>
+{% endif %}
+
+<a href="/login" class="link">Already have an account?</a>
+{% endblock %}
